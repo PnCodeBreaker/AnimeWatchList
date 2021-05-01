@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-
 import { Avatar, Paper, Grid, Typography, Container, Button } from '@material-ui/core';
 import { GoogleLogin } from 'react-google-login';
-
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 import Icon from './icon.js';
@@ -14,6 +14,8 @@ const Auth = () => {
     const classes = useStyles();
     const [showPassword, setShowPassword] = useState(false);
     const [isSignup, setIsSignup] = useState(false);
+    const disptach = useDispatch();
+    const history = useHistory();
     const handleSubmit = () => {
 
     };
@@ -28,6 +30,22 @@ const Auth = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup );
         handleShowPassword(false);
     };
+
+    const googleSuccess = async (res) => {
+        const result = res?.profileObj;
+        const token = res?.tokenId;
+
+        try {
+            disptach({ type: 'AUTH' , data: { result, token } })
+            history.push('/');
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    const googleFailure = (error) => {
+        console.log(error);
+        console.log("Google Sign In was unsuccessful. Try again later")
+    }
 
     return (
         <Container component="main" maxWidth="xs">
@@ -50,8 +68,11 @@ const Auth = () => {
                      <Input name="password" label="Password" handleChange={handleChange} type={ showPassword ? "text" : "password" } handleShowPassword={handleShowPassword} />
                      { isSignup && <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password" />}
                  </Grid>
+                 <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
+                     { isSignup ? 'Sign Up' : 'Sign In'}
+                 </Button>
                  <GoogleLogin 
-                     clientId="GOOGLE ID"
+                     clientId="629405749586-qstniqvcs9q5q8fokpqjlksqqoi7112c.apps.googleusercontent.com"
                      render={ (renderProps) => (
                         <Button 
                         className={classes.googleButton} 
@@ -65,10 +86,11 @@ const Auth = () => {
                         Google Sign In
                         </Button>
                      )}
+                     onSuccess={googleSuccess}
+                     onFailure={googleFailure}
+                     cookiePolicy="single_host_origin"
+
                  />
-                 <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
-                     { isSignup ? 'Sign Up' : 'Sign In'}
-                 </Button>
                  <Grid container justify="flex-end">
                      <Grid item>
                          <Button onClick={switchMode}> { isSignup ? 'Already Have an account? Sign In' : "Don't have an account Sign Up" }</Button>
