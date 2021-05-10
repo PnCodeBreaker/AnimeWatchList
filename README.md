@@ -1,2 +1,2 @@
 # ANIMEWATCHLIST
-Personal Repo for Implementing a robust User Authentication with email verification and third party Verification Like Google OAuth And also a CRUD MERN stack Web Application with Redux. Where we can add Anime shows List and Like other user's Anime List.
+Personal Repo for Learning/Implementing Redux State Management with third party Authentication/Verification Like Google OAuth and also JWT(Token), Creating a CRUD MERN Stack Application. Where users can create accounts and add Anime shows List and Like other user's Anime List.
