@@ -18,7 +18,7 @@ app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 
 app.get('/',(req,res) => {
-        res.send('Welcome to Memories API');
+        res.send('Welcome to Anime Watch List API');
 })
 
 const PORT = process.env.PORT || 5000;

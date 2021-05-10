@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://memories-mernstack21.herokuapp.com' });
+const API = axios.create({ baseURL: 'https://animewatchlistpn21.herokuapp.com' });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
