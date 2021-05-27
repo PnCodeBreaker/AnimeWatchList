@@ -14,7 +14,7 @@ Backend Deployed in heroku and db in mongoDb Atlas.
 </ul>
 <br>
 <h4> To Run The Web App on your local machine </h4>
-```bash
+``` bash
    $ git clone the above repo
    $ cd to the directory and cd to client
    $ npm install ( node.js must be installed )
