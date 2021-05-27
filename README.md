@@ -1,5 +1,5 @@
 # AnimeWatchList
-<b>Personal Repo for Learning/Implementing Redux State Management with third party Authentication/Verification Like Google OAuth and also JWT(Token), Creating a CRUD MERN Stack Application. Where users can create accounts and add Anime shows List and Like other user's Anime List.</b>
+<b>Personal Repo for Learning/Implementing Redux State Management with third party Authentication/Verification Like Google OAuth and also JWT(Token), Creating a CRUD MERN Stack Application. Where users can create accounts and add Anime shows List and Like other user's Anime List along with Searching Anime by name or tags.</b>
 <br>
 ## Live Website :- https://animewatchlistpn21.netlify.app/  
 Backend Deployed in heroku and db in mongoDb Atlas.
@@ -10,7 +10,7 @@ Backend Deployed in heroku and db in mongoDb Atlas.
 <h2> Features and Tech used in AnimeWatchList:- </h2>
 <ul><li> MERN ( MongoDb, Express, Reactjs, Nodejs ) Stack is used with Redux as StateManagement.</li>
   <li> SignIn/Signup Using Google Authentication and JWT token.</li>
-  <li> CRUD features with User Creation and Liking posts are implemented </li>
+  <li> CRUD features with User Creation and Liking posts are implemented along with Searching Posts by Name or tags </li>
   <li> Posts recommendation and Pagination are also implemented </li>
 </ul>
 <br>
