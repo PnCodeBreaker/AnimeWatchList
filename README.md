@@ -10,7 +10,8 @@ Backend Deployed in heroku and db in mongoDb Atlas.
 <h2> Features and Tech used in AnimeWatchList:- </h2>
 <ul><li> MERN ( MongoDb, Express, Reactjs, Nodejs ) Stack is used with Redux as StateManagement.</li>
   <li> SignIn/Signup Using Google Authentication and JWT token.</li>
-  <li> CRUD features with User Creation and Liking posts are also implemented </li>
+  <li> CRUD features with User Creation and Liking posts are implemented </li>
+  <li> Posts recommendation and Pagination are also implemented </li>
 </ul>
 <br>
 <h4> To Run The Web App on your local machine </h4>
