@@ -14,12 +14,11 @@ Backend Deployed in heroku and db in mongoDb Atlas.
 </ul>
 <br>
 <h4> To Run The Web App on your local machine </h4>
-``` bash
+```bash
    $ git clone the above repo
-   $ cd to the directory and cd to client
-   $ npm install ( node.js must be installed )
-   Also Set up the ENV file requiring google authentication ID.
-   $ npm start 
+   $ cd to the directory and npm install ( node.js must be installed )
+   Set up the ENV file to connect to MongoDB and JWT Auth Token
+   $ npm start/nodemon/node.js 
 ```
 <h2> Screenshots : - </h2>
 <img src="https://user-images.githubusercontent.com/41236287/117702075-ad6a8b00-b1e5-11eb-96c1-86fdd7731e2f.jpg" alt="AnimeWatchList Screenshot" width="auto" height="auto">
