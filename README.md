@@ -18,7 +18,7 @@ Backend Deployed in heroku and db in mongoDb Atlas.
    $ git clone the above repo
    $ cd to the directory and cd to client
    $ npm install ( node.js must be installed )
-   $ Also Set up the ENV file requiring google authentication ID.
+   Also Set up the ENV file requiring google authentication ID.
    $ npm start 
 ```
 <h2> Screenshots : - </h2>
